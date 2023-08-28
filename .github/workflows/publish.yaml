@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     branches:
-      - develop
+      - master
       - next
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
         uses: ./.github/composite-actions/install
 
   update-next:
-    if: ${{ github.ref == 'refs/heads/develop' }}
+    if: ${{ github.ref == 'refs/heads/master' }}
     needs: [release]
     name: Update next
     runs-on: ubuntu-latest
@@ -34,5 +34,5 @@ jobs:
 
       - name: Back-merge master into next
         run: |
-          git merge --ff-only origin/develop
+          git merge --ff-only origin/master
           git push
