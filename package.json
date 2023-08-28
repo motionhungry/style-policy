@@ -15,7 +15,8 @@
   "author": "Kyle Getrost <kyle@motionhungry.com>",
   "main": "index.js",
   "files": [
-    "prettier"
+    "prettier",
+    "tsconfig"
   ],
   "scripts": {
     "prepare": "husky install",
