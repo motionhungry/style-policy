@@ -24,6 +24,6 @@ module.exports = {
       'always',
       ['config', 'deps', 'eslint', 'prettier', 'typescript'],
     ],
-    'scope-empty': [2, 'never'],
+    'scope-empty': [1, 'never'],
   },
 };
