@@ -19,7 +19,11 @@ module.exports = {
         'release',
       ],
     ],
-    'scope-enum': [2, 'always', ['deps', 'eslint', 'prettier', 'typescript']],
+    'scope-enum': [
+      2,
+      'always',
+      ['config', 'deps', 'eslint', 'prettier', 'typescript'],
+    ],
     'scope-empty': [1, 'never'],
   },
 };
