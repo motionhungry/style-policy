@@ -1,0 +1,48 @@
+{
+  "name": "@motionhungry/style-policy",
+  "version": "0.0.0-development",
+  "description": "Motion Hungry's code style policy configurations",
+  "keywords": [],
+  "homepage": "https://github.com/motionhungry/style-policy#readme",
+  "bugs": {
+    "url": "https://github.com/motionhungry/style-policy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/motionhungry/style-policy.git"
+  },
+  "license": "MIT",
+  "author": "Kyle Getrost <kyle@motionhungry.com>",
+  "main": "index.js",
+  "files": [
+    "prettier"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "prettier-check": "prettier . -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "prettier": "./prettier",
+  "dependencies": {
+    "prettier-plugin-packagejson": "^2.4.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.2",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.2",
+    "typescript": "^5.2.2"
+  },
+  "packageManager": "pnpm@8.6.5",
+  "publishConfig": {
+    "access": "public"
+  }
+}
