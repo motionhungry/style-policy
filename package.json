@@ -23,7 +23,7 @@
     "eslint:check": "eslint --max-warnings=0 .",
     "eslint:fix": "eslint --fix --max-warnings=0 .",
     "prepare": "husky install",
-    "prettier-check": "prettier . -c",
+    "prettier:check": "prettier . -c",
     "semantic-release": "semantic-release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
