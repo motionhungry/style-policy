@@ -23,6 +23,19 @@ jobs:
       - name: Run commitlint check
         run: pnpm commitlint -f ${{ github.event.pull_request.base.sha }}
 
+  eslint:
+    name: 'ESLint'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+
+      - name: Install
+        uses: ./.github/composite-actions/install
+
+      - name: Run ESLint check
+        run: pnpm eslint:check
+
   prettier:
     name: 'Prettier'
     runs-on: ubuntu-latest
@@ -34,4 +47,4 @@ jobs:
         uses: ./.github/composite-actions/install
 
       - name: Run Prettier check
-        run: pnpm prettier-check
+        run: pnpm prettier:check
