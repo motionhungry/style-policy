@@ -1,4 +1,4 @@
-const { TYPESCRIPT_FILES } = require('./constants');
+const { TYPESCRIPT_FILES } = require('./_constants');
 
 module.exports = {
   overrides: [
