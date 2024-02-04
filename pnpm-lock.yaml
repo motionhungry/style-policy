@@ -52,6 +52,9 @@ devDependencies:
   '@semantic-release/git':
     specifier: ^10.0.1
     version: 10.0.1(semantic-release@21.1.1)
+  '@tsconfig/strictest':
+    specifier: ^2.0.2
+    version: 2.0.2
   eslint:
     specifier: ^8.48.0
     version: 8.48.0
@@ -1122,6 +1125,13 @@ packages:
     resolution:
       {
         integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==,
+      }
+    dev: true
+
+  /@tsconfig/strictest@2.0.2:
+    resolution:
+      {
+        integrity: sha512-jt4jIsWKvUvuY6adJnQJlb/UR7DdjC8CjHI/OaSQruj2yX9/K6+KOvDt/vD6udqos/FUk5Op66CvYT7TBLYO5Q==,
       }
     dev: true
 

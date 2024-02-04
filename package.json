@@ -24,11 +24,12 @@
     "eslint:fix": "eslint --fix --max-warnings=0 .",
     "prepare": "husky install",
     "prettier:check": "prettier . -c",
+    "prettier:fix": "prettier --ignore-unknown --write",
     "semantic-release": "semantic-release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
-    "*": "prettier --ignore-unknown --write",
+    "*": "pnpm prettier:fix",
     "*.js": "pnpm eslint:fix"
   },
   "prettier": "./prettier",
@@ -50,6 +51,7 @@
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@semantic-release/git": "^10.0.1",
+    "@tsconfig/strictest": "^2.0.2",
     "eslint": "^8.48.0",
     "husky": "^8.0.0",
     "lint-staged": "^14.0.1",
