@@ -1,21 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
+  "extends": "@tsconfig/strictest",
   "compilerOptions": {
-    "composite": false,
+    "alwaysStrict": true,
+    "composite": true,
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
+    "exactOptionalPropertyTypes": false,
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
-    "isolatedModules": true,
-    "moduleResolution": "node",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "strictNullChecks": true
+    "isolatedModules": false
   },
   "exclude": ["node_modules"]
 }
