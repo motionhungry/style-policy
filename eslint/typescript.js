@@ -1,11 +1,7 @@
-require('@rushstack/eslint-patch/modern-module-resolution');
-
-const project = require.resolve(process.cwd(), 'tsconfig.json');
-
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: [
-    require.resolve('./base'),
+    require.resolve('./_base'),
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:@typescript-eslint/strict',
@@ -15,11 +11,6 @@ module.exports = {
     'plugin:import/typescript',
   ],
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    project,
-    sourceType: 'module',
-  },
   plugins: ['eslint-plugin-tsdoc'],
   rules: {
     '@typescript-eslint/consistent-type-imports': [
@@ -31,12 +22,5 @@ module.exports = {
     ],
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     'tsdoc/syntax': 'error',
-  },
-  settings: {
-    'import/resolver': {
-      typescript: {
-        project,
-      },
-    },
   },
 };

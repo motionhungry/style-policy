@@ -22,12 +22,11 @@ module.exports = {
       },
     },
   ],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['eslint-plugin-tsdoc', 'import', 'unicorn'],
+  plugins: ['eslint-comments', 'import', 'unicorn'],
   rules: {
     // Import
     'import/first': 'error',
