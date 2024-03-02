@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['./eslint/node'],
+  extends: require.resolve('./eslint/node'),
 };
