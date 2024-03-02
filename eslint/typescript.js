@@ -12,18 +12,18 @@ module.exports = {
         'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:import/typescript',
       ],
+      plugins: ['eslint-plugin-tsdoc'],
+      rules: {
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          {
+            prefer: 'type-imports',
+            disallowTypeAnnotations: false,
+          },
+        ],
+        '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+        'tsdoc/syntax': 'error',
+      },
     },
   ],
-  plugins: ['eslint-plugin-tsdoc'],
-  rules: {
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      {
-        prefer: 'type-imports',
-        disallowTypeAnnotations: false,
-      },
-    ],
-    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    'tsdoc/syntax': 'error',
-  },
 };
