@@ -1,6 +1,5 @@
 module.exports = {
   extends: [
-    require.resolve('./browser'),
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',

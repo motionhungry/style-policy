@@ -13,6 +13,13 @@
   },
   "license": "MIT",
   "author": "Kyle Getrost <kyle@motionhungry.com>",
+  "exports": {
+    "./eslint/*": "./eslint/*.js",
+    "./prettier": "./prettier/index.js",
+    "./tsconfig/default.json": "./tsconfig/default.json",
+    "./tsconfig/react.json": "./tsconfig/react.json",
+    "./tsconfig/nextjs.json": "./tsconfig/nextjs.json"
+  },
   "main": "index.js",
   "files": [
     "eslint",
@@ -22,7 +29,7 @@
   "scripts": {
     "eslint:check": "eslint --max-warnings=0 .",
     "eslint:fix": "eslint --fix --max-warnings=0 .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prettier:check": "prettier . -c",
     "prettier:fix": "prettier . --ignore-unknown --write",
     "semantic-release": "semantic-release",
@@ -56,16 +63,16 @@
     "@semantic-release/git": "^10.0.1",
     "@tsconfig/strictest": "^2.0.2",
     "eslint": "^8.48.0",
-    "husky": "^8.0.0",
+    "husky": "^9.0.11",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
     "semantic-release": "^21.1.1",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.2",
-    "typescript": "^5.2.2"
+    "eslint": ">=8.48.0 < 9",
+    "prettier": ">=3.0.0 < 4",
+    "typescript": ">=4.8.0 < 6"
   },
   "packageManager": "pnpm@8.6.5",
   "publishConfig": {
