@@ -3,10 +3,10 @@
   "display": "React",
   "extends": "./default.json",
   "compilerOptions": {
+    "noEmit": false,
     "jsx": "react-jsx",
-    "lib": ["ES2015", "DOM"],
-    "module": "ESNext",
-    "resolveJsonModule": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
     "target": "es6"
   }
 }
