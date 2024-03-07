@@ -22,7 +22,7 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['config', 'deps', 'eslint', 'prettier', 'typescript'],
+      ['config', 'deps', 'eslint', 'prettier', 'tsconfig'],
     ],
     'scope-empty': [1, 'never'],
   },

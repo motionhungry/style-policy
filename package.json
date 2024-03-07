@@ -1,6 +1,6 @@
 {
   "name": "@motionhungry/style-policy",
-  "version": "1.0.1",
+  "version": "1.1.0-next.13",
   "description": "Motion Hungry's code style policy configurations",
   "keywords": [],
   "homepage": "https://github.com/motionhungry/style-policy#readme",
@@ -13,36 +13,65 @@
   },
   "license": "MIT",
   "author": "Kyle Getrost <kyle@motionhungry.com>",
+  "exports": {
+    "./eslint/*": "./eslint/*.js",
+    "./prettier": "./prettier/index.js",
+    "./tsconfig/default.json": "./tsconfig/default.json",
+    "./tsconfig/react.json": "./tsconfig/react.json",
+    "./tsconfig/nextjs.json": "./tsconfig/nextjs.json"
+  },
   "main": "index.js",
   "files": [
-    "prettier"
+    "eslint",
+    "prettier",
+    "tsconfig"
   ],
   "scripts": {
-    "prepare": "husky install",
-    "prettier-check": "prettier . -c",
+    "eslint:check": "eslint --max-warnings=0 .",
+    "eslint:fix": "eslint --fix --max-warnings=0 .",
+    "prepare": "husky",
+    "prettier:check": "prettier . -c",
+    "prettier:fix": "prettier . --ignore-unknown --write",
     "semantic-release": "semantic-release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
-    "*": "prettier --ignore-unknown --write"
+    "*": "pnpm prettier:fix",
+    "*.js": "pnpm eslint:fix"
   },
   "prettier": "./prettier",
   "dependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/eslint-parser": "^7.22.11",
+    "@rushstack/eslint-patch": "^1.7.2",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "eslint-plugin-unicorn": "^51.0.1",
     "prettier-plugin-packagejson": "^2.4.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@semantic-release/git": "^10.0.1",
-    "husky": "^8.0.0",
+    "eslint": "^8.48.0",
+    "husky": "^9.0.11",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
     "semantic-release": "^21.1.1",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "prettier": "^3.0.2",
-    "typescript": "^5.2.2"
+    "eslint": ">=8.48.0 < 9",
+    "prettier": ">=3.0.0 < 4",
+    "typescript": ">=4.8.0 < 6"
   },
   "packageManager": "pnpm@8.6.5",
   "publishConfig": {
