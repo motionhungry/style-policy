@@ -14,9 +14,6 @@ dependencies:
   '@rushstack/eslint-patch':
     specifier: ^1.7.2
     version: 1.7.2
-  '@tsconfig/strictest':
-    specifier: ^2.0.2
-    version: 2.0.3
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.19.1
     version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.3.3)
@@ -1146,13 +1143,6 @@ packages:
         integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==,
       }
     dev: true
-
-  /@tsconfig/strictest@2.0.3:
-    resolution:
-      {
-        integrity: sha512-MroLvRhMbqtXI5WBSwoomro6OQS4xnCoudUrMb20JO0vLKUs0bAaCEcvM/immEBSJjFAK1l6jW1oAO8q3Ancrg==,
-      }
-    dev: false
 
   /@types/json-schema@7.0.15:
     resolution:
