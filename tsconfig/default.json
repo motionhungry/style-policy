@@ -8,10 +8,22 @@
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
-    "exactOptionalPropertyTypes": false,
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
-    "isolatedModules": false
+    "isolatedModules": false,
+    "strict": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "checkJs": true,
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }
